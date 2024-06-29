@@ -28,7 +28,7 @@ export const ProductCart = ({item}: PropsCart) => {
     }
 
     return (
-        <div className={styles.containerProductCart}>
+        <div key={item.id} className={styles.containerProductCart}>
             <div className={styles.product}>
                 <div className={styles.containerImg}> 
                     <Image src={item.photo} fill alt="imagem do item" />

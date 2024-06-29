@@ -46,7 +46,6 @@ export const useCartStorage = create<CartStorage>((set) => {
         }),
 
         removeFromCart: (itemIput) => set((state) => {
-            console.log(itemIput.qtd)
             if(state.cart.length <= 1) {
                 return (
                     state.total = 0,
