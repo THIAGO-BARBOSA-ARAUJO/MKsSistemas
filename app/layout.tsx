@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.scss";
 import { Header } from "@/components";
 import { Footer } from "@/components/Footer/Footer";
+import { ToastContainer } from 'react-toastify';
 
 const montserrat = Montserrat({ 
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={montserrat.className}>
+        <ToastContainer />
         <Header />
         {children}
         <Footer/>

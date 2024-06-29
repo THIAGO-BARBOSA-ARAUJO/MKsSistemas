@@ -2,15 +2,17 @@ import styles from './Product.module.scss'
 import { ProductCartType } from '../../types/index'
 import Image from 'next/image'
 import { useCartStorage } from '@/hooks/useCartStorage'
+import 'react-toastify/dist/ReactToastify.min.css'; 
+
 
 type ProductType = {
     item: ProductCartType,
-    key: number
+    key: number,
 }
 
 export const ProductItem = ({item}: ProductType) => {
 
-    const addCart = useCartStorage((state) => state.addToCart)
+    const [ addCart ] = useCartStorage((state) => [state.addToCart])
 
     return (
         <div className={styles.container}>

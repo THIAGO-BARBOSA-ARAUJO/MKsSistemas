@@ -12,7 +12,7 @@ export type ProductCartType = {
     id: number,
     name: string,
     description?: string,
-    qtd: string
+    qtd: number
     photo: string,
     price: string,
 }
