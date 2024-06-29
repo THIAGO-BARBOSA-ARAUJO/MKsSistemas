@@ -36,7 +36,7 @@ export const Cart = ( ) => {
       {productCart.length > 0 ? (
         productCart.map((item: ProductCartType) => {
           return (
-            <ProductCart item={item}/>
+            <ProductCart key={item.id} item={item}/>
           )
         })  
       ) : 
